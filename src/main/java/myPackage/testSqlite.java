@@ -7,7 +7,7 @@ public class testSqlite {
         Connection c = null;
         Statement stmt = null;
 
-fdfdfdfedf
+
         try {
             Class.forName("org.sqlite.JDBC");
             String url = "jdbc:sqlite:/home/wiss/sharks.db";
