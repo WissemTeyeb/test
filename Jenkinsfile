@@ -16,9 +16,9 @@ pipeline {
                         )                   
                         sh 'mvn -B -DskipTests clean package'
                     } catch(e) {
-                        currentBuild.result = "failet ye wissem"
+                        currentBuild.result = "FAILED"
                     } finally {
-                        if(currentBuild.result == "failet ye wissem") {
+                        if(currentBuild.result == "FAILED") {
                             mattermostSend (
                                 color: "danger", 
                                 message: "Build FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER} (<${env.BUILD_URL}|Link to build>)"
